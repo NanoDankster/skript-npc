@@ -34,25 +34,29 @@ public class SkriptNPC extends JavaPlugin {
         getLogger().info("skript-npc is warming up...");
         saveMyConfig();
         loadMyConfig();
-        if (Skript.isAcceptRegistrations()) {
-            try {
-                getAddonInstance()
-                        .loadClasses("io.github.nanodankster.skriptnpc", "skript");
-                getLogger().info("Loaded all addon classes.");
-            } catch (IOException e) {
-                getLogger().severe("Cannot load the addon classes to Skript!");
-                e.printStackTrace();
+        if (getServer().getPluginManager().getPlugin("Skript") != null) {
+            if (config.getBoolean("enable-metrics")) {
+                Metrics metrics = new Metrics(getInstance());
+                metrics.addCustomChart(new Metrics.SimplePie("skript_version", () ->
+                        getServer().getPluginManager().getPlugin("Skript").getDescription().getVersion()));
+                getLogger().info("Metrics are enabled.");
+            } else {
+                getLogger().info("Metrics are disabled, please enable them!");
+            }
+            if (Skript.isAcceptRegistrations()) {
+                try {
+                    getAddonInstance()
+                            .loadClasses("io.github.nanodankster.skriptnpc", "skript");
+                    getLogger().info("Loaded all addon classes.");
+                } catch (IOException e) {
+                    getLogger().severe("Cannot load the addon classes to Skript!");
+                    e.printStackTrace();
+                }
+            } else {
+                getLogger().severe("Skript is not accepting registrations!");
             }
         } else {
-            getLogger().severe("Skript is not accepting registrations!");
-        }
-        if (config.getBoolean("enable-metrics")) {
-            Metrics metrics = new Metrics(getInstance());
-            metrics.addCustomChart(new Metrics.SimplePie("skript_version", () ->
-                    getServer().getPluginManager().getPlugin("Skript").getDescription().getVersion()));
-            getLogger().info("Metrics are enabled.");
-        } else {
-            getLogger().info("Metrics are disabled, please enable them!");
+            getLogger().severe("Cannot find Skript!");
         }
         getLogger().info("Finished loading.");
     }
