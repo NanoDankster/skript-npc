@@ -27,7 +27,7 @@ public class EffDespawnCitizen extends Effect {
 
     @Override
     protected void execute(Event event) {
-        if (citizen != null) {
+        if (citizen.getSingle(event) != null) {
             NPC npc = citizen.getSingle(event).getNpc();
             if (npc.isSpawned()) {
                 npc.despawn();

@@ -11,6 +11,7 @@ import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
+import ch.njol.util.coll.CollectionUtils;
 import io.github.nanodankster.skriptnpc.util.SkriptCitizen;
 import org.bukkit.event.Event;
 
@@ -29,7 +30,7 @@ public class ExprCitizenName extends SimpleExpression<String> {
 
     @Override
     protected String[] get(Event event) {
-        if (citizen != null) {
+        if (citizen.getSingle(event) != null) {
             return new String[]{citizen.getSingle(event).getNpc().getName()};
         }
         return null;
@@ -63,5 +64,13 @@ public class ExprCitizenName extends SimpleExpression<String> {
                 citizen.getSingle(e).getNpc().setName((String) delta[0]);
                 break;
         }
+    }
+
+    @Override
+    public Class<?>[] acceptChange(Changer.ChangeMode mode) {
+        if (mode == Changer.ChangeMode.SET) {
+            return CollectionUtils.array(String.class);
+        }
+        return null;
     }
 }

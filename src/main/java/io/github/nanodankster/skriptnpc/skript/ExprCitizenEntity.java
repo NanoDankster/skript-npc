@@ -29,7 +29,7 @@ public class ExprCitizenEntity extends SimpleExpression<Entity> {
 
     @Override
     protected Entity[] get(Event event) {
-        if (citizen != null) {
+        if (citizen.getSingle(event) != null) {
             if (citizen.getSingle(event).getNpc().isSpawned()) {
                 return new Entity[]{citizen.getSingle(event).getNpc().getEntity()};
             }

@@ -32,7 +32,7 @@ public class EffCitizenAttack extends Effect {
 
     @Override
     protected void execute(Event event) {
-        if (citizen != null && entity != null) {
+        if (citizen.getSingle(event) != null && entity.getSingle(event) != null) {
             Navigator nav = citizen.getSingle(event).getNpc().getNavigator();
             nav.cancelNavigation();
             nav.setTarget(entity.getSingle(event), attack);

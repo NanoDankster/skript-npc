@@ -26,7 +26,7 @@ public class CondIsNavigating extends Condition {
 
     @Override
     public boolean check(Event event) {
-        return citizen != null && citizen.getSingle(event).getNpc().getNavigator().isNavigating();
+        return citizen.getSingle(event) != null && citizen.getSingle(event).getNpc().getNavigator().isNavigating();
     }
 
     @Override

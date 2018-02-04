@@ -28,7 +28,7 @@ public class EffSpawnCitizen extends Effect {
 
     @Override
     protected void execute(Event event) {
-        if (citizen != null && location != null) {
+        if (citizen.getSingle(event) != null && location.getSingle(event) != null) {
             citizen.getSingle(event).getNpc().spawn(location.getSingle(event));
         }
     }

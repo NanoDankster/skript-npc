@@ -28,7 +28,7 @@ public class EffPauseNavigation extends Effect {
 
     @Override
     protected void execute(Event event) {
-        if (citizen != null) {
+        if (citizen.getSingle(event) != null) {
             citizen.getSingle(event).getNpc().getNavigator().setPaused(pause);
         }
     }

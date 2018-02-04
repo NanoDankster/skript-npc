@@ -26,7 +26,7 @@ public class CondIsPaused extends Condition {
 
     @Override
     public boolean check(Event event) {
-        return citizen != null && citizen.getSingle(event).getNpc().getNavigator().isPaused();
+        return citizen.getSingle(event) != null && citizen.getSingle(event).getNpc().getNavigator().isPaused();
     }
 
     @Override

@@ -30,7 +30,7 @@ public class EffAnimateCitizen extends Effect {
 
     @Override
     protected void execute(Event event) {
-        if (citizen != null && animation != null) {
+        if (citizen.getSingle(event) != null && animation.getSingle(event) != null) {
             if (citizen.getSingle(event).getType().equals(EntityType.PLAYER)) {
                 animation.getSingle(event).play((Player) citizen.getSingle(event).getNpc().getEntity());
             }

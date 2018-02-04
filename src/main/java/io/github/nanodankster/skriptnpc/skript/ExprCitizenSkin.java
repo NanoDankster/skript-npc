@@ -22,7 +22,7 @@ import org.bukkit.event.Event;
 @Since("0.1")
 public class ExprCitizenSkin extends SimpleExpression<String> {
     static {
-        Skript.registerExpression(ExprCitizenName.class, String.class, ExpressionType.SIMPLE,
+        Skript.registerExpression(ExprCitizenSkin.class, String.class, ExpressionType.SIMPLE,
                 "[the] (citizen|npc) skin [name] of %citizen%",
                 "[the] %citizen%'s (citizen|npc) skin [name]");
     }
@@ -31,7 +31,7 @@ public class ExprCitizenSkin extends SimpleExpression<String> {
 
     @Override
     protected String[] get(Event event) {
-        if (citizen != null) {
+        if (citizen.getSingle(event) != null) {
             if (citizen.getSingle(event).getNpc().isSpawned()) {
                 SkinnableEntity skinnableEntity = (SkinnableEntity) citizen.getSingle(event).getNpc().getEntity();
                 return new String[]{skinnableEntity.getSkinName()};
