@@ -29,7 +29,8 @@ public class ExprCitizenFromId extends SimpleExpression<SkriptCitizen> {
     @Override
     protected SkriptCitizen[] get(Event event) {
         if (id.getSingle(event) != null && CitizensAPI.getNPCRegistry().getById(id.getSingle(event).intValue()) != null) {
-            return new SkriptCitizen[]{new SkriptCitizen(CitizensAPI.getNPCRegistry().getById(id.getSingle(event).intValue()))};
+            SkriptCitizen citizen = new SkriptCitizen(CitizensAPI.getNPCRegistry().getById(id.getSingle(event).intValue()));
+            return new SkriptCitizen[]{citizen};
         }
         return null;
     }
