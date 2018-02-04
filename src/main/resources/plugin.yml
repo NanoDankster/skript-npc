@@ -1,0 +1,22 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#         _           _         _                                 #
+#        | |         (_)       | |                                #
+#    ___ | | __ _ __  _  _ __  | |_  ______  _ __   _ __    ___   #
+#   / __|| |/ /| '__|| || '_ \ | __||______|| '_ \ | '_ \  / __|  #
+#   \__ \|   < | |   | || |_) || |_         | | | || |_) || (__   #
+#   |___/|_|\_\|_|   |_|| .__/  \__|        |_| |_|| .__/  \___|  #
+#                       | |                        | |            #
+#                       |_|                        |_|            #
+#                                                                 #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                                                                 #
+#                                            by NanoDankster      #
+#                            https://github.com/NanoDankster      #
+#                                                                 #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+name: skript-npc
+main: io.github.nanodankster.skriptnpc.SkriptNPC
+version: 0.1
+author: NanoDankster
+website: https://github.com/NanoDankster
