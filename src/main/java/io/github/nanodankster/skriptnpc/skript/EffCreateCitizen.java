@@ -33,7 +33,7 @@ public class EffCreateCitizen extends Effect {
     protected void execute(Event event) {
         if (name.getSingle(event) != null && type.getSingle(event) != null) {
             NPC npc = CitizensAPI.getNPCRegistry().createNPC(convert(type.getSingle(event).toString()), name.getSingle(event));
-            if (location.getSingle(event) != null) {
+            if (location != null) {
                 npc.spawn(location.getSingle(event));
             }
             SkriptCitizen.setLastCitizen(new SkriptCitizen(npc, convert(type.getSingle(event).toString())));
