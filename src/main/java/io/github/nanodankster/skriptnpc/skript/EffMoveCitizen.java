@@ -32,7 +32,7 @@ public class EffMoveCitizen extends Effect {
     protected void execute(Event event) {
         if (citizen.getSingle(event) != null && location.getSingle(event) != null) {
             Number moveSpeed;
-            if (speed != null) {
+            if (speed != null && speed.getSingle(event) != null) {
                 moveSpeed = speed.getSingle(event);
             } else {
                 moveSpeed = 1;

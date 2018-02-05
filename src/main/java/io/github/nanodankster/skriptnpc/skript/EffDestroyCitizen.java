@@ -18,7 +18,7 @@ import org.bukkit.event.Event;
 @Since("0.1")
 public class EffDestroyCitizen extends Effect {
     static {
-        Skript.registerEffect(EffDespawnCitizen.class,
+        Skript.registerEffect(EffDestroyCitizen.class,
                 "destroy %citizen%");
     }
 

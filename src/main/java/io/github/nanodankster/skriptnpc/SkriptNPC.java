@@ -109,8 +109,8 @@ public class SkriptNPC extends JavaPlugin {
     public static void registerPropExpr(final Class<? extends SimplePropertyExpression> exprClass,
                                         Class<?> returnClass, final String property, final String type) {
         String[] propPatterns = {
-                "[the]" + property + "[s] of %" + type + "%",
-                "%" + type + "%'[s] " + property + "[s]"
+                "[the] " + property + " of %" + type + "%",
+                "%" + type + "%'[s] " + property
         };
         Skript.registerExpression(exprClass, returnClass, ExpressionType.PROPERTY, propPatterns);
     }
