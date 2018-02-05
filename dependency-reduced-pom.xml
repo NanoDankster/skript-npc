@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.nanodankster.skriptnpc</groupId>
   <artifactId>skript-npc</artifactId>
-  <version>0.1</version>
+  <version>0.1.1</version>
   <build>
     <plugins>
       <plugin>

@@ -2,6 +2,8 @@ package io.github.nanodankster.skriptnpc;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
+import ch.njol.skript.expressions.base.SimplePropertyExpression;
+import ch.njol.skript.lang.ExpressionType;
 import io.github.nanodankster.skriptnpc.util.Metrics;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -102,5 +104,14 @@ public class SkriptNPC extends JavaPlugin {
             throw new IllegalStateException();
         }
         return instance;
+    }
+
+    public static void registerPropExpr(final Class<? extends SimplePropertyExpression> exprClass,
+                                        Class<?> returnClass, final String property, final String type) {
+        String[] propPatterns = {
+                "[the]" + property + "[s] of %" + type + "%",
+                "%" + type + "%'[s] " + property + "[s]"
+        };
+        Skript.registerExpression(exprClass, returnClass, ExpressionType.PROPERTY, propPatterns);
     }
 }
