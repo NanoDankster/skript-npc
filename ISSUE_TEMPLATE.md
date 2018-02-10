@@ -18,15 +18,15 @@
 
 ### Server Information
 
-+ Minecraft version
+> Minecraft version.
 
 ...
 
-+ Skript version
+> Skript version.
 
 ...
 
-+ Addon version
+> Addon version.
 
 ...
 
