@@ -18,7 +18,7 @@ import org.bukkit.event.Event;
 @Since("0.1.1")
 public class ExprPropCitizenSkin extends SimplePropertyExpression<SkriptCitizen, String> {
     static {
-        SkriptNPC.registerPropExpr(ExprPropCitizenSkin.class, String.class, "skin [name]", "citizen");
+        SkriptNPC.registerPropExpr(ExprPropCitizenSkin.class, String.class, "[npc] skin [name]", "citizen");
     }
 
     @Override

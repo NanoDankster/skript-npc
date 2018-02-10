@@ -24,18 +24,20 @@ public class EffPauseNavigation extends Effect {
     }
 
     private Expression<SkriptCitizen> citizen;
-    private Boolean pause;
+    private Boolean pause = true;
 
     @Override
     protected void execute(Event event) {
-        if (citizen.getSingle(event) != null) {
-            citizen.getSingle(event).getNpc().getNavigator().setPaused(pause);
+        if (citizen != null) {
+            if (citizen.getSingle(event) != null) {
+                citizen.getSingle(event).getNpc().getNavigator().setPaused(pause);
+            }
         }
     }
 
     @Override
     public String toString(Event event, boolean b) {
-        return "cancel the navigation of a citizen";
+        return "pause/continue the navigation of a citizen";
     }
 
     @Override

@@ -28,6 +28,9 @@ public class EffDestroyCitizen extends Effect {
     protected void execute(Event event) {
         if (citizen.getSingle(event) != null) {
             citizen.getSingle(event).getNpc().destroy();
+            if (citizen.getSingle(event) == SkriptCitizen.getLastCitizen()) {
+                SkriptCitizen.setLastCitizen(null);
+            }
         }
     }
 

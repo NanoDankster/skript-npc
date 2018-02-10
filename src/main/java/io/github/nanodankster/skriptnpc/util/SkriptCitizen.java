@@ -12,20 +12,17 @@ public class SkriptCitizen {
 
     private static SkriptCitizen lastCitizen;
 
-    private Integer id;
     private String name;
     private EntityType type;
     private NPC npc;
 
     public SkriptCitizen(NPC npc, EntityType type) {
-        this.id = npc.getId();
         this.name = npc.getFullName();
         this.type = type;
         this.npc = npc;
     }
 
     public SkriptCitizen(NPC npc) {
-        this.id = npc.getId();
         this.name = npc.getFullName();
         this.type = npc.getEntity().getType();
         this.npc = npc;
@@ -37,10 +34,6 @@ public class SkriptCitizen {
 
     public EntityType getType() {
         return type;
-    }
-
-    public Integer getId() {
-        return id;
     }
 
     public static void animateCitizen(SkriptCitizen citizen, PlayerAnimation animation) {
