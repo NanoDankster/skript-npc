@@ -14,7 +14,7 @@ import io.github.nanodankster.skriptnpc.util.SkriptCitizen;
 @Since("0.1.1")
 public class ExprPropCitizenId extends SimplePropertyExpression<SkriptCitizen, Number> {
     static {
-        SkriptNPC.registerPropExpr(ExprPropCitizenId.class, Number.class, "[npc] id[entifier]", "citizen");
+        SkriptNPC.registerPropExpr(ExprPropCitizenId.class, Number.class, "id[entifier]", "citizen");
     }
 
     @Override
@@ -25,7 +25,7 @@ public class ExprPropCitizenId extends SimplePropertyExpression<SkriptCitizen, N
     @Override
     public Number convert(SkriptCitizen skriptCitizen) {
         if (skriptCitizen != null) {
-            return skriptCitizen.getNpc().getId();
+            return skriptCitizen.getId();
         }
         return null;
     }
