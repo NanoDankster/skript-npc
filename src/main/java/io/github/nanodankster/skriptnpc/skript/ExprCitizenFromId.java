@@ -16,12 +16,12 @@ import org.bukkit.event.Event;
 
 @Name("Citizen from ID")
 @Description("Returns a citizen from its ID.")
-@Examples("set {_x} to the citizen from npc id 1")
+@Examples("set {_x} to the citizen from id 1")
 @Since("0.1")
 public class ExprCitizenFromId extends SimpleExpression<SkriptCitizen> {
     static {
         Skript.registerExpression(ExprCitizenFromId.class, SkriptCitizen.class, ExpressionType.SIMPLE,
-                "[the] (citizen|npc) from id[entifier] %number%");
+                "[the] (citizen|npc) (with|from) id[entifier] %number%");
     }
 
     private Expression<Number> id;
