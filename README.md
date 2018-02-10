@@ -12,3 +12,4 @@ A nice NPC addon.
 - [Skript Hub Discord Server](https://skripthub.net/discord)
 - [Skript Chat Discord Server](https://discord.gg/wfkUMXZ)
 - [Skript Topluluğu Discord Server](https://discord.gg/UuNuz5Y) (Turkish)
+- [BStats](https://bstats.org/plugin/bukkit/skript-npc)
