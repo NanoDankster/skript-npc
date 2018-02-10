@@ -6,7 +6,7 @@ A nice NPC addon.
 - [Examples](https://github.com/NanoDankster/skript-npc/wiki/Examples)
 - [GitHub Wiki Documentation](https://github.com/NanoDankster/skript-npc/wiki/Documentation)
 - [Skript Hub Documentation](https://skripthub.net/docs/?addon=skript-npc)
-- [BStats](https://bstats.org/plugin/bukkit/skript-npc)
+- [bStats](https://bstats.org/plugin/bukkit/skript-npc)
 
 #### Discord
 - Nano#1334
