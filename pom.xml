@@ -51,6 +51,10 @@
             <id>bensku-repo</id>
             <url>https://raw.githubusercontent.com/bensku/mvn-repo/master</url>
         </repository>
+        <repository>
+            <id>everything</id>
+            <url>http://repo.citizensnpcs.co/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -69,9 +73,8 @@
         <dependency>
             <groupId>ch.njol</groupId>
             <artifactId>skript</artifactId>
-            <version>2.2-dev32d</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/Skript.jar</systemPath>
+            <version>2.2-dev33</version>
+            <scope>provided</scope>
         </dependency>
 
         <!--Citizens-->
@@ -79,8 +82,7 @@
             <groupId>net.citizensnpcs</groupId>
             <artifactId>citizensapi</artifactId>
             <version>2.0.22-SNAPSHOT</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/Citizens.jar</systemPath>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
