@@ -69,7 +69,7 @@ public class SkriptNPC extends JavaPlugin {
                 getLogger().warning("Cannot create the plugin folder!");
             }
         }
-        File file = new File(getDataFolder() + "\\config.yml");
+        File file = new File(getDataFolder() + File.separator + "config.yml");
         if (!file.exists()) {
             try {
                 Files.copy(getResource("config.yml"),file.toPath());
