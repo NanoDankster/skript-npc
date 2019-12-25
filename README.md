@@ -9,7 +9,6 @@ A nice NPC addon.
 - [bStats](https://bstats.org/plugin/bukkit/skript-npc)
 
 #### Discord
-- NanoDankster#2721
 - [Skript Hub Discord Server](https://skripthub.net/discord)
 - [Skript Chat Discord Server](https://discord.gg/wfkUMXZ)
 - [Skript Topluluğu Discord Server](https://discord.gg/UuNuz5Y) (Turkish)
